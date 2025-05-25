@@ -21,7 +21,10 @@ await connectDB();
 await connectCloudinary();
 
 //multiple origins
-const allowedOrigin = ["http://localhost:5173"];
+const allowedOrigin = [
+  "http://localhost:5173",
+  "https://green-cart-frontend-five.vercel.app",
+];
 
 app.post("/stripe", express.raw({ type: "application/json" }), stripeWebHooks);
 
