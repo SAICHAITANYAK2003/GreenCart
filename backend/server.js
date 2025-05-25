@@ -16,8 +16,6 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 4000;
 
-app.use(express.json());
-
 //configs
 await connectDB();
 await connectCloudinary();

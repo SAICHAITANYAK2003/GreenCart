@@ -56,10 +56,12 @@ const Cart = () => {
           address: selectedAddress._id,
         });
 
-        if (data.success) {
+        if (data.success && data.url) {
           window.location.replace(data.url);
         } else {
-          toast.error(data.message);
+          toast.error(
+            data.message || "Something went wrong with Stripe Checkout."
+          );
         }
       }
     } catch (error) {
