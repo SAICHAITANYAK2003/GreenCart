@@ -24,6 +24,7 @@ await connectCloudinary();
 const allowedOrigin = [
   "http://localhost:5173",
   "https://green-cart-frontend-five.vercel.app",
+  "https://greencart.webinfloo.com",
 ];
 
 app.post("/stripe", express.raw({ type: "application/json" }), stripeWebHooks);
